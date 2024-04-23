@@ -9,7 +9,7 @@ from config.api_token import TOKEN
 from config.api_token import PARSE_MODE_HTML
 
 from text.text_commands_bot.text_command_start import START_TEXT
-from text.text_description.text_description import DESCRIPTION_TEXT
+from text.text_commands_bot.text_command_description import DESCRIPTION_TEXT
 from text.text_commands_bot.text_command_contacts import TEXT_COMMAND_CONTACTS
 
 from functions.commands.help_command import HELP_COMMAND
