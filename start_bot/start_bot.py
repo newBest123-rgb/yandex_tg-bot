@@ -61,7 +61,7 @@ async def start_start_bot(message: types.Message):
     await recording_users(message)
 
 
-@dp.message_handler(commands=['menu'])
+@dp.message_handler(commands=['menu', 'Menu', 'MENU'])
 async def start_menu_bot(message: types.Message):
     await bot.send_message(chat_id=message.from_user.id,
                            text=START_TEXT,
@@ -70,7 +70,7 @@ async def start_menu_bot(message: types.Message):
     await message.delete()
 
 
-@dp.message_handler(Text('Показать меню'))
+@dp.message_handler(Text('Показать меню', 'показать меню'))
 async def pokaz_menu_bot(message: types.Message):
     await bot.send_message(chat_id=message.from_user.id,
                            text=START_TEXT,
@@ -112,7 +112,7 @@ async def callback_query(callback: types.CallbackQuery):
     await callback_admin_users_id(callback)
 
 
-@dp.message_handler(commands=['help'])
+@dp.message_handler(commands=['help', 'Help', 'HELP'])
 async def help_bot(message: types.Message):
     await bot.send_message(chat_id=message.from_user.id,
                            text=HELP_COMMAND,
@@ -121,7 +121,7 @@ async def help_bot(message: types.Message):
     await message.delete()
 
 
-@dp.message_handler(commands=['description'])
+@dp.message_handler(commands=['description', 'Description', 'DESCRIPTION'])
 async def description_bot(message: types.Message):
     await bot.send_message(chat_id=message.from_user.id,
                            text=DESCRIPTION_TEXT,
@@ -130,7 +130,7 @@ async def description_bot(message: types.Message):
     await message.delete()
 
 
-@dp.message_handler(commands=['contacts'])
+@dp.message_handler(commands=['contacts', 'Contacts', 'CONTACTS'])
 async def contacts_bot(message: types.Message):
     await bot.send_message(chat_id=message.from_user.id,
                            text=TEXT_COMMAND_CONTACTS,
@@ -139,7 +139,7 @@ async def contacts_bot(message: types.Message):
     await message.delete()
 
 
-@dp.message_handler(commands=['id'])
+@dp.message_handler(commands=['id', 'Id', 'ID'])
 async def id_bot(message: types.Message):
     await message.answer(text=f'{message.from_user.id}',
                          reply_markup=kb_back,
