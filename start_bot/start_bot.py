@@ -59,7 +59,7 @@ async def pokaz_menu_bot(message: types.Message):
 
 
 @dp.message_handler(Text('Пользователи'))
-async def users_bot(message: types.Message):
+async def add_users_bot(message: types.Message):
     await show_users(message)
 
 
