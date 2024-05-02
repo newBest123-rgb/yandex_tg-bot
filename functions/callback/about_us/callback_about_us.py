@@ -8,6 +8,6 @@ from keyboards.inlain_keyboards.keyboards_about_us.inlain_about_us import about_
 
 async def callback_contacts_hospital(callback: types.CallbackQuery):
     if callback.data == 'about_us':
-        await callback.message.reply(TEXT_CONTACTS_HOSPITAL,
-                                     reply_markup=about_us_kb,
-                                     parse_mode=PARSE_MODE_HTML)
+        await callback.message.answer(TEXT_CONTACTS_HOSPITAL,
+                                      reply_markup=about_us_kb,
+                                      parse_mode=PARSE_MODE_HTML)
