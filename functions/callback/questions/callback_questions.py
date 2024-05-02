@@ -8,6 +8,6 @@ from keyboards.inlain_keyboards.keyboards_questions.inlain_questions import ques
 
 async def callback_query_questions(callback: types.CallbackQuery):
     if callback.data == 'chast_vopros':
-        await callback.message.reply(FREQUENT_QUESTIONS,
-                                     reply_markup=questions_kb,
-                                     parse_mode=PARSE_MODE_HTML)
+        await callback.message.answer(FREQUENT_QUESTIONS,
+                                      reply_markup=questions_kb,
+                                      parse_mode=PARSE_MODE_HTML)
