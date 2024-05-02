@@ -8,9 +8,9 @@ from config.api_token import TOKEN
 
 from functions.on_startup.on_startup import on_startup
 
-from functions.commands.contacts_commands import func_contacts_bot
-from functions.commands.description_commands import func_description_bot
-from functions.commands.help_commands import func_help_bot
+from functions.commands.main_commands.contacts_commands import func_contacts_bot
+from functions.commands.main_commands.description_commands import func_description_bot
+from functions.commands.main_commands.help_commands import func_help_bot
 from functions.commands.menu_commands.pokaz_menu_commands import func_pokaz_menu_bot
 from functions.commands.menu_commands.menu_commands import func_start_menu_bot
 from functions.commands.start_commands.start_comands import func_start_start_bot
